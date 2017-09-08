@@ -2,10 +2,10 @@
 $(document).ready(function () {
     var comentarios = [];
 
-    if (!sessionStorage.currenData) {
-        sessionStorage.currenData = [];
+    if (!localStorage.currenData) {
+        localStorage.currenData = [];
     } else {
-        comentarios = JSON.parse(sessionStorage.currenData);
+        comentarios = JSON.parse(localStorage.currenData);
     }
 
     for (var i = 0; i < comentarios.length; i++) {
@@ -19,7 +19,7 @@ $(document).ready(function () {
                 "mensaje": $("#mensaje").val()
             };
             comentarios.push(objeto);
-            sessionStorage.currenData = JSON.stringify(comentarios);
+            localStorage.currenData = JSON.stringify(comentarios);
             agregarComentario(objeto);
             $("#nombre").val("");
             $("#mensaje").val("");
@@ -27,12 +27,12 @@ $(document).ready(function () {
     });
 
     $("#btnLimpiar").click(function () {
-        sessionStorage.clear();
-        var divEspacio = document.getElementById("espacio");
-        var sectionPadre = divEspacio.parentNode;
-        sectionPadre.removeChild(divEspacio);
-        var divEspacioText = document.createTextNode("");
-        sectionPadre.appendChild(divEspacioText);
+        localStorage.clear();
+        // var divEspacio = document.getElementById("espacio");
+        // var sectionPadre = divEspacio.parentNode;
+        // sectionPadre.removeChild(divEspacio);
+        // var divEspacioText = document.createTextNode("");
+        // sectionPadre.appendChild(divEspacioText);
     });
 });
 
