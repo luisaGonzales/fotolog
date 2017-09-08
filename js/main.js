@@ -28,11 +28,6 @@ $(document).ready(function () {
 
     $("#btnLimpiar").click(function () {
         localStorage.clear();
-        // var divEspacio = document.getElementById("espacio");
-        // var sectionPadre = divEspacio.parentNode;
-        // sectionPadre.removeChild(divEspacio);
-        // var divEspacioText = document.createTextNode("");
-        // sectionPadre.appendChild(divEspacioText);
     });
 });
 
